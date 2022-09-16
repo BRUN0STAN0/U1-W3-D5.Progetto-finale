@@ -1,8 +1,14 @@
+body {
+    background: linear-gradient(0deg, rgb(243, 230, 230) 30%, rgb(243, 242, 242) 32%);
+    overflow: hidden;
+}
+
 #container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
+
 }
 
 #calculator {
@@ -11,6 +17,7 @@
     padding: 4px;
     background-color: rgb(41, 41, 41);
     border-radius: 15px;
+    box-shadow: 10px 10px 20px rgb(141, 139, 139);
 }
 
 #display-chronology {
@@ -90,8 +97,29 @@ button:hover {
 /* SCIENTIFIC */
 
 button#scientific {
-    height: 35px;
+    height: 50px;
     padding: 0px 2px;
     margin: 0px;
     border-radius: 10px;
+}
+
+#scientific-buttons {
+    display: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    transition: 1s;
+}
+
+#scientific-buttons button {
+    height: 30px;
+    border-radius: 5px;
+    margin: 3px;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.5);
+    transition: 1s;
+}
+
+#scientific-buttons button:hover {
+    color: black;
+    background-color: white;
+    transition: 1s;
 }
