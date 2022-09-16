@@ -72,6 +72,10 @@ button {
     font-size: 20px;
 }
 
+#clear {
+    background-color: rgb(255, 255, 255);
+}
+
 button:hover {
     color: black;
     background-color: whitesmoke;
