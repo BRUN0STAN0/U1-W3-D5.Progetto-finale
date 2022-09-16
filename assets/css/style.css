@@ -115,9 +115,11 @@ button#scientific {
 }
 
 #scientific-buttons {
-    display: none;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    transition: 1s;
+    transition: .5s;
+    height: 0;
+    opacity: 0;
 }
 
 #scientific-buttons button {

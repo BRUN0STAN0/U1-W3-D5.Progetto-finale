@@ -34,18 +34,27 @@ function equal() {
     }
 }
 
-/* SCIENTIFIC OPERATOR */
+/* SCIENTIFIC BUTTON */
 
 let openScientific = false;
+
+let scientificButton = document.getElementById("scientific-buttons");
+scientificButton.style.opacity = "0";
+scientificButton.style.height = "0";
 function displayScientific() {
     if (openScientific == true) {
         openScientific = false;
-        document.getElementById("scientific-buttons").style.display = "none";
+        scientificButton.style.opacity = "0";
+        scientificButton.style.height = "25px";
+
     } else {
         openScientific = true;
-        document.getElementById("scientific-buttons").style.display = "grid";
+        scientificButton.style.opacity = "1";
+        scientificButton.style.height = "40px";
     }
 }
+
+/* SCIENTIFIC OPERATOR */
 
 function takePow() {
     displayChronology.value = Math.pow(displayChronology.value, 2);
@@ -60,7 +69,6 @@ function takeSqrt() {
 }
 
 function takePI() {
-    saveLocalVar = displayChronology.value
     displayChronology.value *= Math.PI;
     displayOperation.value *= Math.PI;
     nanError();
@@ -75,9 +83,8 @@ function takeLog() {
 /* NaN Error */
 
 function nanError() {
-    saveLocalVar = displayChronology.value
     if (displayChronology.value == "NaN") {
-        displayChronology.value = saveLocalVar;
+        displayChronology.value = "";
         displayOperation.style.fontSize = "18px";
         displayOperation.value = "INSERT ONLY ONE NUMBER"
     }
