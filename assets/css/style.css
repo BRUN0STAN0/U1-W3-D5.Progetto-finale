@@ -1,0 +1,97 @@
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+#calculator {
+    max-width: 300px;
+    width: 80%;
+    padding: 4px;
+    background-color: rgb(41, 41, 41);
+    border-radius: 15px;
+}
+
+#display-chronology {
+    width: 90%;
+    padding: 10px;
+    border: 0;
+    color: white;
+    text-align: right;
+    background-color: transparent;
+    outline: none;
+    font-size: 15px;
+}
+
+#display-operation {
+    width: 90%;
+    padding: 20px;
+    padding-top: 0px;
+    border: 0;
+    text-align: right;
+    background-color: transparent;
+    outline: none;
+    font-size: 40px;
+    color: red;
+}
+
+
+
+#buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        ". . . ."
+        ". . . ."
+        ". . . ."
+        ". . . ."
+        ". . equal equal";
+    background-color: slategray;
+    border-radius: 15px;
+}
+
+
+
+button {
+    color: white;
+    background-color: rgb(123, 136, 149);
+    border-radius: 100px;
+    border: 0px;
+    transition: 1s;
+    margin: 12%;
+    height: 55px;
+    font-size: 20px;
+}
+
+button:hover {
+    color: black;
+    background-color: whitesmoke;
+    transition: 1s;
+}
+
+.operator {
+    color: red;
+    background-color: rgb(172, 172, 172);
+}
+
+.equal {
+    color: white;
+    background-color: red;
+    grid-area: equal;
+}
+
+.operator,
+.equal {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* SCIENTIFIC */
+
+button#scientific {
+    height: 35px;
+    padding: 0px 2px;
+    margin: 0px;
+    border-radius: 10px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <div id="container">
+        <div id="calculator">
+            <div id="display">
+                <button id="scientific">☰</button>
+                <input type="text" name="display" id="display-chronology" placeholder="50+50="readonly>
+                <input type="text" name="display" id="display-operation" placeholder="100" readonly>
+            </div>
+            <div id="buttons">
+                <button class="operator">C</button>
+                <button class="operator">%</button>
+                <button class="operator">÷</button>
+                <button class="operator">←</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button class="operator">x</button>
+                <button onclick="takeNumber('4')">4</button>
+                <button onclick="takeNumber('5')">5</button>
+                <button onclick="takeNumber('6')">6</button>
+                <button onclick="takeNumber('-')"class="operator">-</button>
+                <button onclick="takeNumber('1')">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button class="operator">+</button>
+                <button>0</button>
+                <button>.</button>
+                <button class="equal">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/script/script.js"></script>
+</body>
+</html>
