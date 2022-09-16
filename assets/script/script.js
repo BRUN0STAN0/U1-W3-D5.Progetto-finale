@@ -48,7 +48,7 @@ function displayScientific() {
 function takePow() {
     saveLocalVar = displayChronology.value
     displayChronology.value = Math.pow(displayChronology.value, 2);
-    displayOperation.value = "";
+    displayOperation.value = Math.pow(displayOperation.value, 2);
     if (displayChronology.value == "NaN") {
         displayChronology.value = saveLocalVar;
         displayOperation.style.fontSize = "18px";
@@ -59,7 +59,7 @@ function takePow() {
 function takeSqrt() {
     saveLocalVar = displayChronology.value
     displayChronology.value = Math.sqrt(displayChronology.value);
-    displayOperation.value = "";
+    displayOperation.value = Math.sqrt(displayOperation.value);
     if (displayChronology.value == "NaN") {
         displayChronology.value = saveLocalVar;
         displayOperation.style.fontSize = "18px";
@@ -70,7 +70,7 @@ function takeSqrt() {
 function takePI() {
     saveLocalVar = displayChronology.value
     displayChronology.value *= Math.PI;
-    displayOperation.value = "";
+    displayOperation.value *= Math.PI;
     if (displayChronology.value == "NaN") {
         displayChronology.value = saveLocalVar;
         displayOperation.style.fontSize = "18px";
@@ -81,7 +81,7 @@ function takePI() {
 function takeLog() {
     saveLocalVar = displayChronology.value
     displayChronology.value = Math.log(displayChronology.value);
-    displayOperation.value = "";
+    displayOperation.value = Math.log(displayOperation.value);
     if (displayChronology.value == "NaN") {
         displayChronology.value = saveLocalVar;
         displayOperation.style.fontSize = "18px";
