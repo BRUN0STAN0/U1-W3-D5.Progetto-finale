@@ -1,6 +1,8 @@
 let displayOperation = document.getElementById("display-operation");
 let displayChronology = document.getElementById("display-chronology");
 
+/* MINIMAL CALCULATOR */
+
 function takeNumber(number) {
     displayOperation.value += number;
     displayChronology.value += number;
@@ -26,7 +28,7 @@ function equal() {
     try {
         displayOperation.value = eval(displayChronology.value);
         displayChronology.value = displayOperation.value;
-    } catch (err) {
+    } catch {
         displayOperation.style.fontSize = "27px";
         displayOperation.value = "INVALID INPUT";
     }
@@ -46,42 +48,34 @@ function displayScientific() {
 }
 
 function takePow() {
-    saveLocalVar = displayChronology.value
     displayChronology.value = Math.pow(displayChronology.value, 2);
     displayOperation.value = Math.pow(displayOperation.value, 2);
-    if (displayChronology.value == "NaN") {
-        displayChronology.value = saveLocalVar;
-        displayOperation.style.fontSize = "18px";
-        displayOperation.value = "INSERT ONLY ONE NUMBER"
-    }
+    nanError();
 }
 
 function takeSqrt() {
-    saveLocalVar = displayChronology.value
     displayChronology.value = Math.sqrt(displayChronology.value);
     displayOperation.value = Math.sqrt(displayOperation.value);
-    if (displayChronology.value == "NaN") {
-        displayChronology.value = saveLocalVar;
-        displayOperation.style.fontSize = "18px";
-        displayOperation.value = "INSERT ONLY ONE NUMBER"
-    }
+    nanError();
 }
 
 function takePI() {
     saveLocalVar = displayChronology.value
     displayChronology.value *= Math.PI;
     displayOperation.value *= Math.PI;
-    if (displayChronology.value == "NaN") {
-        displayChronology.value = saveLocalVar;
-        displayOperation.style.fontSize = "18px";
-        displayOperation.value = "INSERT ONLY ONE NUMBER"
-    }
+    nanError();
 }
 
 function takeLog() {
-    saveLocalVar = displayChronology.value
     displayChronology.value = Math.log(displayChronology.value);
     displayOperation.value = Math.log(displayOperation.value);
+    nanError();
+}
+
+/* NaN Error */
+
+function nanError() {
+    saveLocalVar = displayChronology.value
     if (displayChronology.value == "NaN") {
         displayChronology.value = saveLocalVar;
         displayOperation.style.fontSize = "18px";
