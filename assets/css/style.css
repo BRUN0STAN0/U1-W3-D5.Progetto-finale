@@ -127,3 +127,14 @@ button#scientific {
     background-color: white;
     transition: 1s;
 }
+
+/* Copyright */
+
+#copyright {
+    position: fixed;
+    color: gray;
+    font-size: x-small;
+    letter-spacing: 1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    bottom: 10px;
+}
